@@ -34,6 +34,26 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+        /* Style for audio player container - no longer directly used for audio, but keeping for layout consistency */
+        .audio-player-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem; /* space-y-3 equivalent */
+        }
+        /* The audio-player-item class is now repurposed for download links */
+        .audio-player-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* Removed background and shadow as the link itself will be styled */
+        }
+        .audio-player-item label {
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+            color: #cbd5e1; /* slate-300 */
+            margin-bottom: 0.5rem;
+        }
+        /* Removed audio specific styles as they are no longer needed */
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 to-slate-800 text-white min-h-screen flex flex-col items-center justify-center p-6">
@@ -59,7 +79,7 @@
                     <a href="quiz2.html" class="btn-hover-effect bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
                         Chapter 2 Quiz
                     </a>
-                    <a href="#" class="btn-hover-effect bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
+                    <a href="quiz3.html" class="btn-hover-effect bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
                         Chapter 3 Quiz
                     </a>
                     <a href="#" class="btn-hover-effect bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
@@ -78,13 +98,24 @@
                     <a href="notes2.html" class="btn-hover-effect bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-75">
                         Chapter 2 Notes
                     </a>
-                    <a href="#" class="btn-hover-effect bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-75">
+                    <a href="notes3.html" class="btn-hover-effect bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-75">
                         Chapter 3 Notes
                     </a>
                     <a href="#" class="btn-hover-effect bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-75">
                         Chapter 4 Notes
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 gap-6 mb-12">
+            <div class="section-card">
+                <h2 class="text-2xl font-semibold mb-4 text-slate-200">Audio Lectures</h2>
+                <p class="text-slate-300 mb-4">Download comprehensive audio lectures for each chapter.</p>
+                <div class="audio-player-container">
+                    <a href="https://drive.google.com/drive/folders/1Pg7ltnlIsj4YwFwDDxGWeOSJNJb5tqOZ?usp=sharing" class="btn-hover-effect bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                        Drive Link
+                    </a>
             </div>
         </section>
 
